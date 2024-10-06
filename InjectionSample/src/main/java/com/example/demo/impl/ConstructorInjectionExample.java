@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import com.example.demo.example.Example;
 import com.example.demo.service.SomeService;
 
-@Component
+//@Component
 public class ConstructorInjectionExample implements Example {
 	private final SomeService someService;
 	

@@ -1,0 +1,13 @@
+package com.example.demo.impl;
+
+import com.example.demo.example.Example;
+
+public class FieldInjectionExample implements Example {
+
+	@Override
+	public void run() {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
+}
