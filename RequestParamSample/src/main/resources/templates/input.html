@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- tymeleafを使うことを宣言 -->
+<head>
+<meta charset="UTF-8">
+<title>Request Parameter</title>
+</head>
+<body>
+	<h1>入力画面</h1>
+	<hr> 
+	<!-- 
+	th:actionでthymeleafのformのaction属性を指定する。
+	"@{}"でサーバー側で処理を行うURL（リクエストハンドラメソッド）を指定する。
+	 -->
+	<form action = "./output.html" th:action = "@{/result}" method = "get"> 
+		<label for = "get-value">入力値：</label>
+		<input type = "text" id = "get-value" name = "val">
+		<button type = "submit">GET送信</button>
+	</form>
+	<br>
+	<form action = "./output.html" th:action = "@{/result}" method = "post">
+		<label for = "get-value">入力値：</label>
+		<input type = "text" id = "get-value" name = "val">
+		<button type = "submit">POST送信</button>
+	</form>
+</body>
+</html>

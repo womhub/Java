@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Request Parameter</title>
+</head>
+<body>
+<h1>出力画面</h1>
+<hr>
+<h2 th:text = "${value}">送信された値が表示される</h2>
+<a href = "./input.html" th:href = "@{/show}">入力画面へ</a>
+</body>
+</html>

@@ -1,5 +1,0 @@
-package used;
-
-public interface Calculator {
-
-}

@@ -1,5 +1,0 @@
-package com.example.demo.example;
-
-public interface Exmaple {
-	void run();
-}

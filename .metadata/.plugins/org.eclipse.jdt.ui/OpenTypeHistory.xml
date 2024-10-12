@@ -4,4 +4,5 @@
     <typeInfo handle="=DISample/src\/main\/java=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/&lt;com.example.demo.used{Greet.java[Greet" modifiers="513" timestamp="1727876125000"/>
     <typeInfo handle="=JavaConfigSample/src\/main\/java=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/&lt;com.example.demo.service{BusinessLogic.java[BusinessLogic" modifiers="513" timestamp="1728104220000"/>
     <typeInfo handle="=InjectionSample/\/Users\/wombat\/.gradle\/caches\/modules-2\/files-2.1\/com.jayway.jsonpath\/json-path\/2.9.0\/37fe2217f577b0b68b18e62c4d17a8858ecf9b69\/json-path-2.9.0.jar=/gradle_used_by_scope=/test=/=/test=/true=/&lt;com.jayway.jsonpath(EvaluationListener.class[EvaluationListener" modifiers="1537" timestamp="1727621563000"/>
+    <typeInfo handle="=InjectionSample/src\/main\/java=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/&lt;com.example.demo.example{Example.java[Example" modifiers="513" timestamp="1728112500000"/>
 </typeInfoHistroy>
