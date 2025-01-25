@@ -4,4 +4,5 @@
     <fullyQualifiedTypeName name="used.SubCalc"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="com.example.demo.service.SomeService"/>
+    <fullyQualifiedTypeName name="com.example.webapp.helper.ToDoHelper"/>
 </qualifiedTypeNameHistroy>
