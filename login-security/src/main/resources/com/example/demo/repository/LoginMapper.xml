@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.repository.LoginMapper">
+
+	<select id="selectUserByName"
+		resultType="com.example.demo.entity.User">
+		SELECT
+		*
+		FROM users
+		WHERE username = #{username}
+	</select>
+
+	<insert id="insertSession"
+		parameterType="com.example.demo.entity.SpringSession">
+		INSERT INTO spring_sessions (session_id, principal_name, creation_time,
+		last_accessed_time, max_inactive_interval, attributes)
+		VALUES (#{sessionId}, #{principalName}, #{creationTime},
+		#{lastAccessedTime}, #{maxInactiveInterval}, #{attributes})
+	</insert>
+
+	<select id="getSessionById" parameterType="string"
+		resultType="com.example.demo.entity.SpringSession">
+		SELECT * FROM spring_sessions WHERE session_id = #{sessionId}
+	</select>
+	
+	<insert id="insertUser">
+        INSERT INTO users (username, password_hash, email, created_at, updated_at)
+        VALUES (#{username}, #{passwordHash}, #{email}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+    </insert>
+
+</mapper>

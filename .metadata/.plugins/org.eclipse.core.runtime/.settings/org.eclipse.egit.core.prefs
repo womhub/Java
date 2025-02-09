@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=/Users/wombat/eclipse-workspace/.git\:
-GitRepositoriesView.GitDirectories.relative=.git\:
+GitRepositoriesView.GitDirectories=/Users/wombat/eclipse-workspace/.git\:/Users/wombat/work/spring-boot-login_app_demo/.git\:
+GitRepositoriesView.GitDirectories.relative=.git\:/Users/wombat/work/spring-boot-login_app_demo/.git\:
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
