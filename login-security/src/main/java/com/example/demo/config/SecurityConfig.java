@@ -31,7 +31,7 @@ public class SecurityConfig {
                     // H2コンソールへのアクセスを許可
                     .requestMatchers("/h2-console/**").permitAll()
                     // login, signupのパスへのリクエストはすべて許可
-                    .requestMatchers("/login", "/signup", "/viewSignup").permitAll()
+                    .requestMatchers("/login", "/signup", "/viewSignup","/js/**").permitAll()
                     // その他のリクエストは認証が必要
                     .anyRequest().authenticated()
             )

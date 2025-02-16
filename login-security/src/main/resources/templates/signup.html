@@ -20,11 +20,29 @@
 			for="password-confirm">Confirm Password:</label> <input
 			type="password" id="passwordConfirm" name="passwordConfirm" required
 			class="signup-input">
-
+		<input type="button" onclick="aalert()">
 		<button type="submit" class="signup-btn">Signup</button>
 	</form>
 	<!-- エラーメッセージを表示するための場所 -->
 	<div id="error-message" style="color: red;"></div>
 	</div>
+	<script>
+	//window.onload = function() {
+		document.addEventListener('DOMContentLoaded', function(){
+	    const urlParams = new URLSearchParams(window.location.search); //URLのerrorを取得
+
+	    // 'error' という名前のクエリパラメータを取得します。
+	    const errorMessage = urlParams.get('error');
+
+	    // errorMessageが存在する場合（エラーメッセージがURLに含まれる場合）
+	    if (errorMessage) {
+	        // エラーメッセージを表示するためのHTML要素にテキストとしてセットします。
+	        document.getElementById('error-message').textContent = errorMessage;
+	    }
+		});
+	function aalert(){
+		alert("Hi");
+	}
+	</script>
 </body>
 </html>

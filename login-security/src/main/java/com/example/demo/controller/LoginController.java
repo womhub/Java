@@ -29,7 +29,7 @@ public class LoginController {
 	public String showHi() {
 		return "hi";
 	}
-	@GetMapping("/viewSignup")
+	@GetMapping("/signup")
 	public String viewSignupForm() {
 		return "signup";
 	}
@@ -37,27 +37,29 @@ public class LoginController {
 	@PostMapping("/signup")
 	public ResponseEntity<String> signup(@Valid @ModelAttribute SignupForm form,
 			BindingResult bindingResult){
-		/*
-		 * //バリデーションチェック if(bindingResult.hasErrors()) { String errorMessage =
-		 * bindingResult.getAllErrors().stream() .map(err -> err.getDefaultMessage())
-		 * .collect(Collectors.joining(",")); //エラーメッセージを,で連結する return
-		 * redirectToErrorPage(errorMessage); }
-		 */
+		
+		  //バリデーションチェック 
+		if(bindingResult.hasErrors()) { String errorMessage =
+		  bindingResult.getAllErrors().stream() .map(err -> err.getDefaultMessage())
+		  .collect(Collectors.joining(",")); //エラーメッセージを,で連結する return
+		  redirectToErrorPage(errorMessage); 
+		}
 		//登録処理
 		try {
 			userRegistrationService.registerUser(form);
-			return ResponseEntity.status(HttpStatus.FOUND).location(URI.create(BASE_FRONTEND_URL + "/home"))
+			return ResponseEntity.status(HttpStatus.FOUND).location(URI.create("http://localhost:8080/home"))
                     .body("User registered successfully.");
 		}catch(Exception ex) {
 			return redirectToErrorPage(ex.getMessage());
 		}
 	}	
+	
 		// エラーメッセージを持ったエラーページへのリダイレクト
 	    private ResponseEntity<String> redirectToErrorPage(String errorMessage) {
+	    	//リダイレクト先のURL作成
 	        UriComponentsBuilder builder = UriComponentsBuilder
-	                .fromHttpUrl(BASE_FRONTEND_URL + "/signup.html")
+	                .fromHttpUrl("http://localhost:8080/signup")
 	                .queryParam("error", errorMessage);
-
 	        URI errorPageUri = builder.build().encode().toUri();
 	        return ResponseEntity.status(HttpStatus.FOUND)
 	                .location(errorPageUri)
